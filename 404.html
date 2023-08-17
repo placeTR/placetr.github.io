@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birşeyler yanlış gitti...</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/140610717?s=200&v=4" type="image/x-icon">
+</head>
+<body class="dark">
+    <button class="go-to-bottom">&darr;</button>
+    <button class="back-to-top">&uarr;</button>
+    <button class="theme">&#9790;</button>
+    <center>
+        <b>Opps!</b><br><br>
+        <div id="txt">
+            Birşeyler yanlış gitti... 
+            İstersen eve dön, burayı terk et veya biraz daha bekle.
+        </div>
+        <br>
+        <input type="submit" id="back" value="Eve dön">
+        <br><br>
+        <a href="">Sayfayı yenile</a>
+    </center>
+    <script>
+        document.querySelector("#back").onclick = function () {
+            window.location.href = "index.html";
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
