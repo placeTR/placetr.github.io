@@ -24,11 +24,13 @@
 				return navigator.userAgent.match(/IEMobile/i);
 			},
 			any: function() {
-				return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+				if (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()) {
+                    return true;
+                } else return false;
 			}
 		};
         const isMobile = mobile.any;
-        if (!isMobile) {
+        if (isMobile) {
             window.location.href = "mobile.html";
         }
     </script>
