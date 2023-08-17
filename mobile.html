@@ -3,7 +3,7 @@
 <head>
     <title>placeTR | r/Place Türkiye</title>
     <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/140610717?s=200&v=4" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="mobile.style.css">
 </head>
 <body class="dark">
     <script>
@@ -28,8 +28,8 @@
 			}
 		};
         const isMobile = mobile.any;
-        if (isMobile) {
-            window.location.href = "mobile.html";
+        if (!isMobile) {
+            window.location.href = "index.html";
         }
     </script>
     <div class="top-bar">
