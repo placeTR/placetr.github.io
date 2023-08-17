@@ -1,1 +1,78 @@
-<meta http-equiv="Refresh" content="0; url='https://discord.gg/placetr'" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Yönlendirme</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/140610717?s=200&v=4" type="image/x-icon">
+</head>
+<body class="dark">
+    <button class="theme">&#9790;</button>
+    <center>
+        <b>Yönlendiriliyorsunuz</b>
+        <div class="txt">
+            placeTR Discord sunucu<br><br>
+            <input id="cancel" type="submit" value="İptal">
+        </div>
+    </center>
+    <script>
+        document.body.onload = function () {
+            setTimeout(function () {
+                window.location.href = "https://discord.gg/placeTR";
+            }, 2500)
+        }
+        document.querySelector("#cancel").addEventListener("click", function () {
+            window.location.href = "index.html";
+        })
+        function getCookie(name) {
+    var value = "; " + document.cookie;
+    var parts = value.split("; " + name + "=");
+    if (parts.length === 2) return parts.pop().split(";").shift();
+}
+
+function toggleTheme() {
+    var body = document.body;
+    var isDarkTheme = body.classList.contains("dark");
+    if (isDarkTheme) {
+        document.cookie = "theme=light";
+    } else {
+        document.cookie = "theme=dark";
+    }
+}
+        if (getCookie("theme") !== null) {
+            document.body.classList.value = getCookie("theme");
+            if (getCookie("theme") === "light") {
+                document.querySelector(".horizontal-menu").style.backgroundColor = "white";
+                document.querySelector("#name").style.color = "black";
+                document.querySelector("#email").style.color = "black";
+                document.querySelector("#sub").style.color = "black";
+                document.querySelector("#body").style.color = "black";
+                document.querySelector("footer").style.backgroundColor = "white";
+            }
+        } else {
+            document.body.classList.value = "dark";
+        }
+        document.querySelector(".theme").addEventListener("click", function () {
+            toggleTheme();
+            if (document.body.classList.value === "dark") {
+                document.body.classList.value = "light";
+                document.querySelector(".horizontal-menu").style.backgroundColor = "white";
+                document.querySelector("#name").style.color = "black";
+                document.querySelector("#email").style.color = "black";
+                document.querySelector("#sub").style.color = "black";
+                document.querySelector("#body").style.color = "black";
+                document.querySelector("footer").style.backgroundColor = "white";
+            } else {
+                document.body.classList.value = "dark";
+                document.querySelector(".horizontal-menu").style.backgroundColor = "black";
+                document.querySelector("#name").style.color = "white";
+                document.querySelector("#email").style.color = "white";
+                document.querySelector("#sub").style.color = "white";
+                document.querySelector("#body").style.color = "white";
+                document.querySelector("footer").style.backgroundColor = "black";
+            }
+        })
+    </script>
+</body>
+</html>
