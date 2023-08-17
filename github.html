@@ -1,1 +1,32 @@
-<meta http-equiv="Refresh" content="0; url='https://github.com/placeTR'" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Yönlendirme</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/140610717?s=200&v=4" type="image/x-icon">
+</head>
+<body class="dark">
+    <button class="go-to-bottom">&darr;</button>
+    <button class="back-to-top">&uarr;</button>
+    <button class="theme">&#9790;</button>
+    <center>
+        <b>Yönlendiriliyorsunuz</b>
+        <div class="txt">
+            placeTR GitHub organizasyon<br><br>
+            <input id="cancel" type="submit" value="İptal">
+        </div>
+    </center>
+    <script>
+        document.body.onload = function () {
+            setTimeout(function () {
+                window.location.href = "https://github.com/placeTR";
+            }, 2500)
+        }
+        document.querySelector("#cancel").addEventListener("click", function () {
+            window.location.href = "index.html";
+        })
+    </script>
+</body>
+</html>
