@@ -24,7 +24,7 @@
 				return navigator.userAgent.match(/IEMobile/i);
 			},
 			any: function() {
-				if (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()) {
+				if (mobile.Android() || mobile.BlackBerry() || mobile.iOS() || mobile.Opera() || mobile.Windows()) {
                     return true;
                 } else return false;
 			}
